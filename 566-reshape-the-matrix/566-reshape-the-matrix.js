@@ -6,19 +6,18 @@
  */
 var matrixReshape = function(mat, r, c) {
     let tot = mat.flat().length;
-    let out = []
     let ini = mat.flat()
     
     if(tot !== (r *c)){
         return mat
     }
-    let temp = []
+    mat.length = 0
    for(let i=0;i<r;i++){
         while(ini.length){
-            out.push(ini.splice(0,c))
+            mat.push(ini.splice(0,c))
         }
        
     }
-    return out
+    return mat
     
 };
